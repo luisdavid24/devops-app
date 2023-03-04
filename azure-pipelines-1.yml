@@ -24,5 +24,9 @@ stages:
               publishJUnitResults: true
               testResultsFiles: '**/surefire-reports/TEST-*.xml'
               goals: 'package'
+    - job: build
+      steps:
+      - script: mvn compile
+        displayName: "Build success"
 
         
